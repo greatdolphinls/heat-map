@@ -8,7 +8,7 @@ import HomeScreen from "@screens/Home/Home";
 import StrengthScreen from "@screens/Strength/Strength";
 import VolumeScreen from "@screens/Volume/Volume";
 import VolatilityScreen from "@screens/Volatility/Volatility";
-import SentmentScreen from "@screens/Sentment/Sentment";
+import SentimentScreen from "@screens/Sentiment/Sentiment";
 import NotificationsScreen from "@screens/Notifications/Notifications";
 import SettingsScreen from "@screens/Settings/Settings";
 
@@ -40,8 +40,8 @@ Navigation.registerComponent(
   Provider
 );
 Navigation.registerComponent(
-  "heatmap.SentmentScreen",
-  () => SentmentScreen,
+  "heatmap.SentimentScreen",
+  () => SentimentScreen,
   store,
   Provider
 );

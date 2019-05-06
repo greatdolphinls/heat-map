@@ -8,6 +8,22 @@ import {
   SUB_FORE_COLOR
 } from "@colors";
 
+const navigatorButtons = {
+  leftButtons: [
+    {
+      icon: require("@assets/img/icon/settings.png"),
+      title: "Menu",
+      id: "settingsToggle"
+    }
+  ],
+  rightButtons: [
+    {
+      icon: require("@assets/img/icon/notification.png"),
+      title: "Menu",
+      id: "notificationsToggle"
+    }
+  ]
+};
 const startTabs = () => {
   Promise.all([
     Icon.getImageSource("md-map", 30),
@@ -20,114 +36,38 @@ const startTabs = () => {
           screen: "heatmap.HomeScreen",
           label: "HOME",
           title: "HeatMap",
-          icon: sources[0],
-          navigatorButtons: {
-            leftButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "settingsToggle"
-              }
-            ],
-            rightButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "notificationsToggle"
-              }
-            ]
-          }
+          icon: require("@assets/img/icon/home.png"),
+          navigatorButtons: navigatorButtons
         },
         {
           screen: "heatmap.StrengthScreen",
           label: "STRENGTH",
           title: "HeatMap",
-          icon: sources[1],
-          navigatorButtons: {
-            leftButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "settingsToggle"
-              }
-            ],
-            rightButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "notificationsToggle"
-              }
-            ]
-          }
+          icon: require("@assets/img/icon/strength.png"),
+          navigatorButtons: navigatorButtons
         },
         {
           screen: "heatmap.VolumeScreen",
           label: "VOLUME",
           title: "HeatMap",
-          icon: sources[0],
-          navigatorButtons: {
-            leftButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "settingsToggle"
-              }
-            ],
-            rightButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "notificationsToggle"
-              }
-            ]
-          }
+          icon: require("@assets/img/icon/volume.png"),
+          navigatorButtons: navigatorButtons
         },
         {
           screen: "heatmap.VolatilityScreen",
           label: "VOLATILITY",
           title: "HeatMap",
-          icon: sources[1],
-          navigatorButtons: {
-            leftButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "settingsToggle"
-              }
-            ],
-            rightButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "notificationsToggle"
-              }
-            ]
-          }
+          icon: require("@assets/img/icon/volatility.png"),
+          navigatorButtons: navigatorButtons
         },
         {
-          screen: "heatmap.SentmentScreen",
-          label: "SENTMENT",
+          screen: "heatmap.SentimentScreen",
+          label: "SENTIMENT",
           title: "HeatMap",
-          icon: sources[0],
-          navigatorButtons: {
-            leftButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "settingsToggle"
-              }
-            ],
-            rightButtons: [
-              {
-                icon: sources[2],
-                title: "Menu",
-                id: "notificationsToggle"
-              }
-            ]
-          }
+          icon: require("@assets/img/icon/sentiment.png"),
+          navigatorButtons: navigatorButtons
         }
       ],
-
       tabsStyle: {
         tabBarButtonColor: DISABLED_COLOR,
         tabBarSelectedButtonColor: POSITIVE_COLOR,
