@@ -5,7 +5,8 @@ import {
   PANEL_COLOR,
   DISABLED_COLOR,
   POSITIVE_COLOR,
-  SUB_FORE_COLOR
+  SUB_FORE_COLOR,
+  MAIN_FORE_COLOR
 } from "@colors";
 
 const navigatorButtons = {
@@ -75,6 +76,7 @@ const startTabs = () => {
     },
     appStyle: {
       screenBackgroundColor: BACKGROUND_COLOR,
+      statusBarColor: SUB_FORE_COLOR,
       tabBarButtonColor: DISABLED_COLOR,
       tabBarSelectedButtonColor: POSITIVE_COLOR,
       tabBarBackgroundColor: PANEL_COLOR,
@@ -86,10 +88,11 @@ const startTabs = () => {
       navBarHidden: true,
       navBarTitleTextCentered: true,
       navBarBackgroundColor: BACKGROUND_COLOR,
-      navBarTextColor: SUB_FORE_COLOR,
+      navBarTextColor: MAIN_FORE_COLOR,
       navBarButtonColor: SUB_FORE_COLOR,
       navBarTextFontSize: 25,
-      navBarTextFontFamily: "HelveticaLT67MC"
+      navBarTextFontFamily: "HelveticaLT67MC",
+      navBarTextFontBold: true
     }
   });
 };
