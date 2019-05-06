@@ -10,7 +10,7 @@ import VolumeScreen from "@screens/Volume/Volume";
 import VolatilityScreen from "@screens/Volatility/Volatility";
 import SentmentScreen from "@screens/Sentment/Sentment";
 import NotificationsScreen from "@screens/Notifications/Notifications";
-import SettingsScreen from "@screens/Sentment/Sentment";
+import SettingsScreen from "@screens/Settings/Settings";
 
 const store = configureStore();
 

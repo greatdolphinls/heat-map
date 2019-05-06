@@ -19,14 +19,14 @@ const startTabs = () => {
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "settingsToggle"
               }
             ],
             rightButtons: [
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "notificationsToggle"
               }
             ]
           }
@@ -41,14 +41,14 @@ const startTabs = () => {
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "settingsToggle"
               }
             ],
             rightButtons: [
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "notificationsToggle"
               }
             ]
           }
@@ -63,14 +63,14 @@ const startTabs = () => {
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "settingsToggle"
               }
             ],
             rightButtons: [
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "notificationsToggle"
               }
             ]
           }
@@ -85,14 +85,14 @@ const startTabs = () => {
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "settingsToggle"
               }
             ],
             rightButtons: [
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "notificationsToggle"
               }
             ]
           }
@@ -107,14 +107,14 @@ const startTabs = () => {
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "settingsToggle"
               }
             ],
             rightButtons: [
               {
                 icon: sources[2],
                 title: "Menu",
-                id: "sideDrawerToggle"
+                id: "notificationsToggle"
               }
             ]
           }
