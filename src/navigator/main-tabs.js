@@ -1,5 +1,12 @@
 import { Navigation } from "react-native-navigation";
 import Icon from "react-native-vector-icons/Ionicons";
+import {
+  BACKGROUND_COLOR,
+  PANEL_COLOR,
+  DISABLED_COLOR,
+  POSITIVE_COLOR,
+  SUB_FORE_COLOR
+} from "@colors";
 
 const startTabs = () => {
   Promise.all([
@@ -11,8 +18,8 @@ const startTabs = () => {
       tabs: [
         {
           screen: "heatmap.HomeScreen",
-          label: "Home",
-          title: "Heat Map",
+          label: "HOME",
+          title: "HeatMap",
           icon: sources[0],
           navigatorButtons: {
             leftButtons: [
@@ -33,8 +40,8 @@ const startTabs = () => {
         },
         {
           screen: "heatmap.StrengthScreen",
-          label: "Strength",
-          title: "Heat Map",
+          label: "STRENGTH",
+          title: "HeatMap",
           icon: sources[1],
           navigatorButtons: {
             leftButtons: [
@@ -55,8 +62,8 @@ const startTabs = () => {
         },
         {
           screen: "heatmap.VolumeScreen",
-          label: "Volume",
-          title: "Heat Map",
+          label: "VOLUME",
+          title: "HeatMap",
           icon: sources[0],
           navigatorButtons: {
             leftButtons: [
@@ -77,8 +84,8 @@ const startTabs = () => {
         },
         {
           screen: "heatmap.VolatilityScreen",
-          label: "Volatility",
-          title: "Heat Map",
+          label: "VOLATILITY",
+          title: "HeatMap",
           icon: sources[1],
           navigatorButtons: {
             leftButtons: [
@@ -99,8 +106,8 @@ const startTabs = () => {
         },
         {
           screen: "heatmap.SentmentScreen",
-          label: "Sentment",
-          title: "Heat Map",
+          label: "SENTMENT",
+          title: "HeatMap",
           icon: sources[0],
           navigatorButtons: {
             leftButtons: [
@@ -120,23 +127,32 @@ const startTabs = () => {
           }
         }
       ],
+
       tabsStyle: {
-        tabBarButtonColor: "#A6A6B3",
-        tabBarSelectedButtonColor: "#22a6ff",
-        tabBarBackgroundColor: "#ffffff",
+        tabBarButtonColor: DISABLED_COLOR,
+        tabBarSelectedButtonColor: POSITIVE_COLOR,
+        tabBarBackgroundColor: PANEL_COLOR,
         forceTitlesDisplay: true,
+        tabFontFamily: "HelveticaLT67MC",
         tabFontSize: 14,
         selectedTabFontSize: 14
       },
       appStyle: {
-        tabBarSelectedButtonColor: "#22a6ff",
-        tabBarButtonColor: "#A6A6B3",
+        tabBarButtonColor: DISABLED_COLOR,
+        tabBarSelectedButtonColor: POSITIVE_COLOR,
+        tabBarBackgroundColor: PANEL_COLOR,
         forceTitlesDisplay: true,
-        tabFontFamily: "Avenir-Medium",
+        tabFontFamily: "HelveticaLT67MC",
+        tabFontWeight: 400,
         tabFontSize: 14,
         selectedTabFontSize: 14,
         navBarHidden: true,
-        navBarTitleTextCentered: true
+        navBarTitleTextCentered: true,
+        navBarBackgroundColor: BACKGROUND_COLOR,
+        navBarTextColor: SUB_FORE_COLOR,
+        navBarButtonColor: SUB_FORE_COLOR,
+        navBarTextFontSize: 25,
+        navBarTextFontFamily: "HelveticaLT67MC"
       }
     });
   });
