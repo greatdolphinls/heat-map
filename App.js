@@ -1,52 +1,62 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import { Navigation } from "react-native-navigation";
+import { Provider } from "react-redux";
+import configureStore from "@store/configureStore";
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
-// const myIcon = <Icon name="rocket" size={30} color="#900" />;
+import startMainTabs from "@navigator/main-tabs";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
+import HomeScreen from "@screens/Home/Home";
+import StrengthScreen from "@screens/Strength/Strength";
+import VolumeScreen from "@screens/Volume/Volume";
+import VolatilityScreen from "@screens/Volatility/Volatility";
+import SentmentScreen from "@screens/Sentment/Sentment";
+import NotificationsScreen from "@screens/Notifications/Notifications";
+import SettingsScreen from "@screens/Sentment/Sentment";
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Icon name="rocket" size={30} color="#900" />
-      </View>
-    );
-  }
-}
+const store = configureStore();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
+// Register Screens
+Navigation.registerComponent(
+  "heatmap.HomeScreen",
+  () => HomeScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.StrengthScreen",
+  () => StrengthScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.VolumeScreen",
+  () => VolumeScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.VolatilityScreen",
+  () => VolatilityScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.SentmentScreen",
+  () => SentmentScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.NotificationsScreen",
+  () => NotificationsScreen,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "heatmap.SettingsScreen",
+  () => SettingsScreen,
+  store,
+  Provider
+);
+
+// Start a App
+startMainTabs();
