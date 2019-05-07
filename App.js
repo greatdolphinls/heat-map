@@ -2,8 +2,6 @@ import { Navigation } from "react-native-navigation";
 import { Provider } from "react-redux";
 import configureStore from "@store/configureStore";
 
-import startMainTabs from "@navigator/main-tabs";
-
 import HomeScreen from "@screens/Home/Home";
 import StrengthScreen from "@screens/Strength/Strength";
 import VolumeScreen from "@screens/Volume/Volume";
@@ -11,10 +9,17 @@ import VolatilityScreen from "@screens/Volatility/Volatility";
 import SentimentScreen from "@screens/Sentiment/Sentiment";
 import NotificationsScreen from "@screens/Notifications/Notifications";
 import SettingsScreen from "@screens/Settings/Settings";
+import SplashScreen from "@screens/Splash/Splash";
 
 const store = configureStore();
 
 // Register Screens
+Navigation.registerComponent(
+  "heatmap.SplashScreen",
+  () => SplashScreen,
+  store,
+  Provider
+);
 Navigation.registerComponent(
   "heatmap.HomeScreen",
   () => HomeScreen,
@@ -59,4 +64,11 @@ Navigation.registerComponent(
 );
 
 // Start a App
-startMainTabs();
+// startMainTabs();
+
+Navigation.startSingleScreenApp({
+  screen: {
+    screen: "heatmap.SplashScreen",
+    title: ""
+  }
+});
